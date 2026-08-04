@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Project — DevFolio</title>
+    <meta
+      name="description"
+      content="Case study for a project from the DevFolio portfolio: the brief, the approach and the result."
+    />
+    <meta name="theme-color" content="#0078ff" />
+
+    <link rel="icon" href="images/png-transparent-bootstrap-hd-logo-thumbnail.png" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.subset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("devfolio-theme");
+          var dark = saved
+            ? saved === "dark"
+            : window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.setAttribute(
+            "data-bs-theme",
+            dark ? "dark" : "light"
+          );
+        } catch (e) {
+          /* storage blocked — fall back to the light theme */
+        }
+      })();
+    </script>
+
+    <script defer src="js/main.js"></script>
+    <script defer src="js/pages.js"></script>
+  </head>
+
+  <body>
+    <div id="preloader" aria-hidden="true"></div>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- ====================================================================
+         Header
+         ==================================================================== -->
+    <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center justify-content-between">
+        <h1 class="logo"><a href="index.html">DevFolio</a></h1>
+
+        <nav id="navbar" class="navbar" aria-label="Main navigation">
+          <ul>
+            <li><a class="nav-link" href="index.html#hero">Home</a></li>
+            <li><a class="nav-link" href="index.html#about">About</a></li>
+            <li><a class="nav-link" href="index.html#services">Services</a></li>
+            <li><a class="nav-link active" href="index.html#work">Work</a></li>
+            <li><a class="nav-link" href="index.html#blog">Blog</a></li>
+            <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+          </ul>
+
+          <button
+            type="button"
+            class="mobile-nav-toggle fa-solid fa-bars"
+            aria-controls="navbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation menu"
+          ></button>
+        </nav>
+
+        <button
+          type="button"
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-pressed="false"
+          aria-label="Switch to dark theme"
+        >
+          <i class="fa-solid fa-moon theme-toggle-icon-light" aria-hidden="true"></i>
+          <i class="fa-solid fa-sun theme-toggle-icon-dark" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- ====================================================================
+         Page hero
+         ==================================================================== -->
+    <div class="hero hero-single route bg-image bg-counter">
+      <div class="overlay-itro"></div>
+      <div class="hero-content display-table">
+        <div class="table-cell">
+          <div class="container">
+            <h2 class="hero-title" data-project="title">Project</h2>
+            <nav aria-label="Breadcrumb">
+              <ol class="breadcrumb d-flex justify-content-center">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item">
+                  <a href="index.html#work">Portfolio</a>
+                </li>
+                <li
+                  class="breadcrumb-item active"
+                  aria-current="page"
+                  data-project="title"
+                >
+                  Project
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="portfolio-details sect-pt4 sect-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
+              <!-- Bootstrap's carousel stands in for the template's Swiper
+                   slider — the bundle is already loaded, Swiper is not. -->
+              <div
+                id="projectSlider"
+                class="portfolio-details-slider carousel slide"
+                data-bs-ride="carousel"
+                aria-label="Project screenshots"
+              >
+                <div class="carousel-inner rounded" data-project="slides"></div>
+
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#projectSlider"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous screenshot</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#projectSlider"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next screenshot</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="col-lg-4 pt-4 pt-lg-0">
+              <aside class="portfolio-info" aria-labelledby="project-info-title">
+                <h3 id="project-info-title">Project information</h3>
+                <ul>
+                  <li>
+                    <strong>Category</strong>:
+                    <span data-project="category"></span>
+                  </li>
+                  <li><strong>Client</strong>: <span data-project="client"></span></li>
+                  <li>
+                    <strong>Project date</strong>:
+                    <span data-project="date"></span>
+                  </li>
+                  <li>
+                    <strong>Project URL</strong>:
+                    <a href="#" data-project="url">example.com</a>
+                  </li>
+                </ul>
+
+                <div class="socials pb-0">
+                  <ul>
+                    <li>
+                      <a href="#" aria-label="Share on Facebook">
+                        <span class="ico-circle">
+                          <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Share on Twitter">
+                        <span class="ico-circle">
+                          <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Share on LinkedIn">
+                        <span class="ico-circle">
+                          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </aside>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="portfolio-description">
+                <h3 data-project="title">Project</h3>
+                <p class="lead" data-project="summary"></p>
+                <p class="lead">
+                  Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+                  Praesent sapien massa, convallis a pellentesque nec, egestas non
+                  nisi. Vestibulum ac diam sit amet quam vehicula elementum sed sit
+                  amet dui. Nulla porttitor accumsan tincidunt.
+                </p>
+                <p class="lead">
+                  Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus
+                  suscipit tortor eget felis porttitor volutpat. Quisque velit nisi,
+                  pretium ut lacinia in, elementum id enim.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Previous / next project -->
+          <nav class="row pager-mf" aria-label="Project navigation">
+            <div class="col-6">
+              <a class="button button-a" href="#" data-project="prev">
+                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                Previous project
+              </a>
+            </div>
+            <div class="col-6 text-end">
+              <a class="button button-a" href="#" data-project="next">
+                Next project
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="copyright-box">
+              <p class="copyright">
+                &copy; Copyright <strong>DevFolio</strong>. All Rights Reserved
+              </p>
+              <div class="credits">
+                Designed by
+                <a
+                  href="https://bootstrapmade.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >BootstrapMade</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      aria-label="Back to top"
+    >
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </a>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

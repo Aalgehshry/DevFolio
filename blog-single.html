@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Article — DevFolio</title>
+    <meta
+      name="description"
+      content="An article from the DevFolio blog on design, development and shipping better interfaces."
+    />
+    <meta name="theme-color" content="#0078ff" />
+
+    <link rel="icon" href="images/png-transparent-bootstrap-hd-logo-thumbnail.png" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.subset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("devfolio-theme");
+          var dark = saved
+            ? saved === "dark"
+            : window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.setAttribute(
+            "data-bs-theme",
+            dark ? "dark" : "light"
+          );
+        } catch (e) {
+          /* storage blocked — fall back to the light theme */
+        }
+      })();
+    </script>
+
+    <script defer src="js/main.js"></script>
+    <script defer src="js/pages.js"></script>
+  </head>
+
+  <body>
+    <div id="preloader" aria-hidden="true"></div>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- ====================================================================
+         Header
+         ==================================================================== -->
+    <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center justify-content-between">
+        <h1 class="logo"><a href="index.html">DevFolio</a></h1>
+
+        <nav id="navbar" class="navbar" aria-label="Main navigation">
+          <ul>
+            <li><a class="nav-link" href="index.html#hero">Home</a></li>
+            <li><a class="nav-link" href="index.html#about">About</a></li>
+            <li><a class="nav-link" href="index.html#services">Services</a></li>
+            <li><a class="nav-link" href="index.html#work">Work</a></li>
+            <li><a class="nav-link active" href="index.html#blog">Blog</a></li>
+            <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+          </ul>
+
+          <button
+            type="button"
+            class="mobile-nav-toggle fa-solid fa-bars"
+            aria-controls="navbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation menu"
+          ></button>
+        </nav>
+
+        <button
+          type="button"
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-pressed="false"
+          aria-label="Switch to dark theme"
+        >
+          <i class="fa-solid fa-moon theme-toggle-icon-light" aria-hidden="true"></i>
+          <i class="fa-solid fa-sun theme-toggle-icon-dark" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- ====================================================================
+         Page hero
+         ==================================================================== -->
+    <div class="hero hero-single route bg-image bg-quote">
+      <div class="overlay-itro"></div>
+      <div class="hero-content display-table">
+        <div class="table-cell">
+          <div class="container">
+            <h2 class="hero-title" data-post="title">Article</h2>
+            <nav aria-label="Breadcrumb">
+              <ol class="breadcrumb d-flex justify-content-center">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="index.html#blog">Blog</a></li>
+                <li
+                  class="breadcrumb-item active"
+                  aria-current="page"
+                  data-post="title"
+                >
+                  Article
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="blog-wrapper sect-pt4 sect-4">
+        <div class="container">
+          <div class="row">
+            <!-- ============================================================
+                 Article
+                 ============================================================ -->
+            <div class="col-lg-8">
+              <article class="post-box">
+                <h2 class="article-title" data-post="title">Article</h2>
+
+                <div class="post-meta">
+                  <ul>
+                    <li>
+                      <span class="fa-regular fa-user" aria-hidden="true"></span>
+                      <span class="visually-hidden">Author:</span>
+                      <a href="index.html#about">Morgan Freeman</a>
+                    </li>
+                    <li>
+                      <span class="fa-regular fa-calendar" aria-hidden="true"></span>
+                      <span class="visually-hidden">Published:</span>
+                      <time data-post="datetime">
+                        <span data-post="date"></span>
+                      </time>
+                    </li>
+                    <li>
+                      <span class="fa-regular fa-folder-open" aria-hidden="true"></span>
+                      <span class="visually-hidden">Category:</span>
+                      <a href="#" data-post="category"></a>
+                    </li>
+                    <li>
+                      <span class="fa-regular fa-clock" aria-hidden="true"></span>
+                      <span class="visually-hidden">Reading time:</span>
+                      10 min
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="post-image" data-post="image"></div>
+
+                <p class="lead" data-post="summary"></p>
+
+                <p class="lead">
+                  Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+                  Praesent sapien massa, convallis a pellentesque nec, egestas non
+                  nisi. Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium
+                  ut lacinia in, elementum id enim.
+                </p>
+
+                <blockquote class="blockquote">
+                  <p>
+                    Design is not just what it looks like and feels like. Design is how
+                    it works.
+                  </p>
+                  <footer class="blockquote-footer">Steve Jobs</footer>
+                </blockquote>
+
+                <p class="lead">
+                  Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus
+                  suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit
+                  amet quam vehicula elementum sed sit amet dui. Curabitur arcu erat,
+                  accumsan id imperdiet et, porttitor at sem.
+                </p>
+
+                <h3>Where it usually goes wrong</h3>
+                <p class="lead">
+                  Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus.
+                  Donec sollicitudin molestie malesuada. Cras ultricies ligula sed magna
+                  dictum porta. Sed porttitor lectus nibh.
+                </p>
+
+                <ul class="list-ico">
+                  <li>
+                    <span class="fa-solid fa-circle-check" aria-hidden="true"></span>
+                    Start from the content, not from the layout grid.
+                  </li>
+                  <li>
+                    <span class="fa-solid fa-circle-check" aria-hidden="true"></span>
+                    Test on a real device before calling it responsive.
+                  </li>
+                  <li>
+                    <span class="fa-solid fa-circle-check" aria-hidden="true"></span>
+                    Keep the keyboard path working at every step.
+                  </li>
+                </ul>
+
+                <div class="widget-tags pt-4">
+                  <ul>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- ==========================================================
+                   Comments
+                   ========================================================== -->
+              <section class="box-comments" aria-labelledby="comments-title">
+                <h3 id="comments-title" class="sidebar-title">Comments</h3>
+                <ul class="list-comments">
+                  <li>
+                    <div class="comment-avatar">
+                      <picture>
+                        <source srcset="images/images02.webp" type="image/webp" />
+                        <img
+                          src="images/images02.jpg"
+                          class="rounded-circle"
+                          width="80"
+                          height="80"
+                          loading="lazy"
+                          decoding="async"
+                          alt=""
+                        />
+                      </picture>
+                    </div>
+                    <div class="comment-details">
+                      <h4 class="comment-author">Xavi Alonso</h4>
+                      <span>18 Sep. 2018</span>
+                      <p>
+                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                      <a href="#comment-form">Reply</a>
+                    </div>
+
+                    <ul class="list-comments comment-children pt-4">
+                      <li>
+                        <div class="comment-avatar">
+                          <picture>
+                            <source srcset="images/images11.webp" type="image/webp" />
+                            <img
+                              src="images/images11.jpeg"
+                              class="rounded-circle"
+                              width="80"
+                              height="80"
+                              loading="lazy"
+                              decoding="async"
+                              alt=""
+                            />
+                          </picture>
+                        </div>
+                        <div class="comment-details">
+                          <h4 class="comment-author">Marta Socrate</h4>
+                          <span>19 Sep. 2018</span>
+                          <p>
+                            Praesent sapien massa, convallis a pellentesque nec, egestas
+                            non nisi. Nulla porttitor accumsan tincidunt.
+                          </p>
+                          <a href="#comment-form">Reply</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </section>
+
+              <!-- ==========================================================
+                   Comment form
+                   ========================================================== -->
+              <section class="form-comments" aria-labelledby="comment-form-title">
+                <h3 id="comment-form-title" class="sidebar-title">Leave a comment</h3>
+
+                <!-- Static hosting has no backend to store comments, so this
+                     form validates and then hands off by email, exactly like
+                     the contact form on the home page. -->
+                <form class="php-email-form" id="comment-form" novalidate>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <div class="form-group">
+                        <label class="visually-hidden" for="comment-name">Your name</label>
+                        <input
+                          type="text"
+                          name="name"
+                          class="form-control"
+                          id="comment-name"
+                          placeholder="Your Name"
+                          autocomplete="name"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <div class="form-group">
+                        <label class="visually-hidden" for="comment-email">Your email</label>
+                        <input
+                          type="email"
+                          name="email"
+                          class="form-control"
+                          id="comment-email"
+                          placeholder="Your Email"
+                          autocomplete="email"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                      <div class="form-group">
+                        <label class="visually-hidden" for="comment-subject">Subject</label>
+                        <input
+                          type="text"
+                          name="subject"
+                          class="form-control"
+                          id="comment-subject"
+                          placeholder="Subject"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label class="visually-hidden" for="comment-message">Comment</label>
+                        <textarea
+                          class="form-control"
+                          name="message"
+                          id="comment-message"
+                          rows="5"
+                          placeholder="Your comment"
+                          required
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="col-md-12 text-center my-3">
+                      <div class="loading">Loading</div>
+                      <div class="error-message" role="alert"></div>
+                      <div class="sent-message" role="status">
+                        Your comment has been sent. Thank you!
+                      </div>
+                    </div>
+                    <div class="col-md-12 text-center">
+                      <button
+                        type="submit"
+                        class="button button-a button-big button-rouded"
+                      >
+                        Post Comment
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </section>
+            </div>
+
+            <!-- ============================================================
+                 Sidebar
+                 ============================================================ -->
+            <div class="col-lg-4">
+              <div class="widget-sidebar sidebar-search">
+                <h3 class="sidebar-title">Search</h3>
+                <form class="d-flex" role="search" action="index.html">
+                  <label class="visually-hidden" for="sidebar-search">Search the blog</label>
+                  <input
+                    type="search"
+                    name="q"
+                    id="sidebar-search"
+                    class="form-control"
+                    placeholder="Search…"
+                  />
+                  <button class="btn btn-search button-a" type="submit">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <span class="visually-hidden">Search</span>
+                  </button>
+                </form>
+              </div>
+
+              <div class="widget-sidebar">
+                <h3 class="sidebar-title">Categories</h3>
+                <ul class="list-sidebar">
+                  <li><a href="#">Web Design</a></li>
+                  <li><a href="#">Web Development</a></li>
+                  <li><a href="#">Accessibility</a></li>
+                  <li><a href="#">Travel</a></li>
+                  <li><a href="#">Photography</a></li>
+                </ul>
+              </div>
+
+              <div class="widget-sidebar">
+                <h3 class="sidebar-title">Latest posts</h3>
+                <ul class="list-sidebar" data-post="related"></ul>
+              </div>
+
+              <div class="widget-sidebar widget-tags">
+                <h3 class="sidebar-title">Tags</h3>
+                <ul>
+                  <li><a href="#">CSS</a></li>
+                  <li><a href="#">HTML</a></li>
+                  <li><a href="#">JavaScript</a></li>
+                  <li><a href="#">Bootstrap</a></li>
+                  <li><a href="#">UI</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="copyright-box">
+              <p class="copyright">
+                &copy; Copyright <strong>DevFolio</strong>. All Rights Reserved
+              </p>
+              <div class="credits">
+                Designed by
+                <a
+                  href="https://bootstrapmade.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >BootstrapMade</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      aria-label="Back to top"
+    >
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </a>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

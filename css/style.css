@@ -20,6 +20,7 @@
      16. Blog cards
      17. Blog single, sidebar & comments
      18. Portfolio details
+     18b. Blog single (detail page)
      19. Contact form
      20. Footer
      21. Scroll reveal animations
@@ -274,6 +275,41 @@ img[width][height] {
   .bg-image {
     background-attachment: scroll;
   }
+}
+
+/* Section backdrops. These used to be inline `style="background-image: …"`
+   attributes, which cannot offer a WebP alternative — as classes they can.
+   The plain `url()` line first is the fallback for browsers without
+   `image-set()`; the second line wins wherever it is supported. */
+.bg-hero {
+  background-image: url("../images/images01.jpg");
+  background-image: image-set(
+    url("../images/images01.webp") type("image/webp"),
+    url("../images/images01.jpg") type("image/jpeg")
+  );
+}
+
+.bg-counter {
+  background-image: url("../images/images03.jpg");
+  background-image: image-set(
+    url("../images/images03.webp") type("image/webp"),
+    url("../images/images03.jpg") type("image/jpeg")
+  );
+}
+
+/* Shared by the testimonials and contact sections. */
+.bg-quote {
+  background-image: url("../images/images10.jpg");
+  background-image: image-set(
+    url("../images/images10.webp") type("image/webp"),
+    url("../images/images10.jpg") type("image/jpeg")
+  );
+}
+
+/* <picture> is a selection wrapper, not a layout box: let the <img> inside it
+   inherit the parent's layout exactly as a bare <img> would have. */
+picture {
+  display: contents;
 }
 
 .paralax-mf,
@@ -1096,12 +1132,24 @@ body.mobile-nav-open {
   }
 }
 
+/* Compact hero used as the page header on the detail pages. Overrides the
+   full-viewport sizing of `.hero`, min-height included. */
 .hero-single {
-  height: 350px;
+  height: 420px;
+  min-height: 420px;
 }
 
 .hero-single .hero-content {
   margin-top: 30px;
+}
+
+.hero-single .breadcrumb {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.hero-single .breadcrumb a:hover {
+  color: var(--color-primary-soft);
 }
 
 .hero-single .hero-title {
@@ -1118,9 +1166,12 @@ body.mobile-nav-open {
   color: var(--color-on-dark);
 }
 
+/* The hero always sits on a darkened photo, in either theme, so these are
+   fixed light values — `--color-primary-soft` turns translucent in dark mode
+   and would drop the current page name to unreadable contrast. */
 .hero-single .breadcrumb .breadcrumb-item.active,
 .hero-single .breadcrumb .breadcrumb-item::before {
-  color: var(--color-primary-soft);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* ==========================================================================
@@ -1668,10 +1719,116 @@ body.mobile-nav-open {
   padding: 0;
 }
 
-.portfolio-details .portfolio-description h2 {
+.portfolio-details .portfolio-description h2,
+.portfolio-details .portfolio-description h3 {
   margin-bottom: 20px;
   font-size: 26px;
   font-weight: 700;
+}
+
+.portfolio-details .portfolio-info {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+}
+
+.portfolio-details .portfolio-info ul li {
+  color: var(--color-body);
+}
+
+/* Bootstrap's control icons are white SVGs — they vanish on a light slide,
+   so give them a dark disc to sit on. */
+.portfolio-details-slider .carousel-control-prev,
+.portfolio-details-slider .carousel-control-next {
+  width: 12%;
+}
+
+.portfolio-details-slider .carousel-control-prev-icon,
+.portfolio-details-slider .carousel-control-next-icon {
+  padding: 1.25rem;
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: var(--radius-circle);
+  background-size: 45%;
+}
+
+/* Previous / next project pager */
+.pager-mf {
+  margin-top: 3rem;
+  gap: 1rem 0;
+}
+
+.pager-mf .button i {
+  margin: 0 0.4rem;
+}
+
+/* ==========================================================================
+   18b. Blog single
+   ========================================================================== */
+
+.blog-wrapper .post-meta ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0;
+  padding-left: 15px;
+}
+
+.blog-wrapper .post-meta ul li:first-child {
+  margin-left: 0;
+}
+
+.blog-wrapper .post-meta ul span[class*="fa-"] {
+  color: var(--color-primary);
+  margin-right: 6px;
+}
+
+.blog-wrapper .post-image {
+  margin: 1.5rem 0 2rem;
+}
+
+.blog-wrapper .post-image img {
+  width: 100%;
+}
+
+.blog-wrapper .blockquote {
+  margin: 2rem 0;
+  background-color: var(--color-surface-2);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.blog-wrapper .blockquote p {
+  margin-bottom: 0.5rem;
+}
+
+.box-comments .list-comments .comment-avatar img {
+  object-fit: cover;
+}
+
+.box-comments .comment-children {
+  margin-left: 40px;
+  padding-left: 0;
+}
+
+@media (max-width: 575px) {
+  .box-comments .comment-children {
+    margin-left: 0;
+  }
+
+  .box-comments .list-comments .comment-avatar,
+  .box-comments .list-comments .comment-details {
+    display: block;
+    padding-left: 0;
+  }
+
+  .box-comments .list-comments .comment-details {
+    padding-top: 12px;
+  }
+}
+
+.sidebar-search form {
+  gap: 0;
+}
+
+.sidebar-search .btn-search {
+  color: var(--color-on-primary);
 }
 
 /* ==========================================================================

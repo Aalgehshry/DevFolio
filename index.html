@@ -19,19 +19,19 @@
       property="og:description"
       content="Portfolio, services and blog of a full stack developer."
     />
-    <meta property="og:image" content="imges/images01.jpg" />
+    <meta property="og:image" content="images/images01.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <link rel="icon" href="imges/png-transparent-bootstrap-hd-logo-thumbnail.png" />
+    <link rel="icon" href="images/png-transparent-bootstrap-hd-logo-thumbnail.png" />
 
     <!-- typed.js is fetched from a CDN: warm the connection early -->
     <link rel="preconnect" href="https://unpkg.com" crossorigin />
 
     <!-- Bootstrap first, then Font Awesome and the site theme so our own
          rules always win over the vendor defaults. -->
-    <link rel="stylesheet" href="Css/bootstrap.min.css" />
-    <link rel="stylesheet" href="Css/all.min.css" />
-    <link rel="stylesheet" href="Css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.subset.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- Applies the saved theme before first paint to avoid a colour flash.
          main.js takes over from here. -->
@@ -130,11 +130,7 @@
     <!-- ====================================================================
          Hero
          ==================================================================== -->
-    <div
-      id="hero"
-      class="hero route bg-image"
-      style="background-image: url(imges/images01.jpg)"
-    >
+    <div id="hero" class="hero route bg-image bg-hero">
       <div class="overlay-itro"></div>
       <div class="hero-content display-table">
         <div class="table-cell">
@@ -163,15 +159,18 @@
                     <div class="row">
                       <div class="col-sm-6 col-md-5">
                         <div class="about-img1">
-                          <img
-                            src="imges/images02.jpg"
-                            class="img-fluid rounded b-shadow-a"
-                            width="150"
-                            height="150"
-                            loading="lazy"
-                            decoding="async"
-                            alt="Portrait of Morgan Freeman"
-                          />
+                          <picture>
+                            <source srcset="images/images02.webp" type="image/webp" />
+                            <img
+                              src="images/images02.jpg"
+                              class="img-fluid rounded b-shadow-a"
+                              width="150"
+                              height="150"
+                              loading="lazy"
+                              decoding="async"
+                              alt="Portrait of Morgan Freeman"
+                            />
+                          </picture>
                         </div>
                       </div>
                       <div class="col-sm-6 col-md-7">
@@ -426,10 +425,7 @@
       <!-- ==================================================================
            Counters
            ================================================================== -->
-      <div
-        class="section-counter paralax-mf bg-image"
-        style="background-image: url(imges/images03.jpg)"
-      >
+      <div class="section-counter paralax-mf bg-image bg-counter">
         <div class="overlay-mf"></div>
         <div class="container position-relative">
           <div class="row">
@@ -545,21 +541,24 @@
             <div class="col-md-4" data-reveal>
               <div class="work-box">
                 <a
-                  href="imges/images04.jpg"
+                  href="images/images04.webp"
                   data-gallery="portfolioGallery"
                   class="portfolio-lightbox"
                   aria-label="Open a larger view of the project Lorem impsum dolor"
                 >
                   <div class="work-img">
-                    <img
-                      src="imges/images04.jpg"
-                      class="img-fluid"
-                      width="960"
-                      height="600"
-                      loading="lazy"
-                      decoding="async"
-                      alt="Screenshot of the Lorem impsum dolor web design project"
-                    />
+                    <picture>
+                      <source srcset="images/images04.webp" type="image/webp" />
+                      <img
+                        src="images/images04.jpg"
+                        class="img-fluid"
+                        width="960"
+                        height="600"
+                        loading="lazy"
+                        decoding="async"
+                        alt="Screenshot of the Lorem impsum dolor web design project"
+                      />
+                    </picture>
                   </div>
                 </a>
                 <div class="work-content">
@@ -574,7 +573,7 @@
                     <div class="col-sm-4">
                       <div class="w-like">
                         <a
-                          href="portfolio-details.html"
+                          href="portfolio-details.html?project=1"
                           aria-label="Read the case study for Lorem impsum dolor"
                         >
                           <span class="fa-solid fa-circle-plus" aria-hidden="true"></span>
@@ -589,21 +588,24 @@
             <div class="col-md-4" data-reveal>
               <div class="work-box">
                 <a
-                  href="imges/images05.jpg"
+                  href="images/images05.webp"
                   data-gallery="portfolioGallery"
                   class="portfolio-lightbox"
                   aria-label="Open a larger view of the project Loreda Cuno Nere"
                 >
                   <div class="work-img">
-                    <img
-                      src="imges/images05.jpg"
-                      class="img-fluid"
-                      width="960"
-                      height="600"
-                      loading="lazy"
-                      decoding="async"
-                      alt="Screenshot of the Loreda Cuno Nere web design project"
-                    />
+                    <picture>
+                      <source srcset="images/images05.webp" type="image/webp" />
+                      <img
+                        src="images/images05.jpg"
+                        class="img-fluid"
+                        width="960"
+                        height="600"
+                        loading="lazy"
+                        decoding="async"
+                        alt="Screenshot of the Loreda Cuno Nere web design project"
+                      />
+                    </picture>
                   </div>
                 </a>
                 <div class="work-content">
@@ -618,7 +620,7 @@
                     <div class="col-sm-4">
                       <div class="w-like">
                         <a
-                          href="portfolio-details.html"
+                          href="portfolio-details.html?project=2"
                           aria-label="Read the case study for Loreda Cuno Nere"
                         >
                           <span class="fa-solid fa-circle-plus" aria-hidden="true"></span>
@@ -633,21 +635,24 @@
             <div class="col-md-4" data-reveal>
               <div class="work-box">
                 <a
-                  href="imges/images06.jpg"
+                  href="images/images06.webp"
                   data-gallery="portfolioGallery"
                   class="portfolio-lightbox"
                   aria-label="Open a larger view of the project Mavrito Lana Dere"
                 >
                   <div class="work-img">
-                    <img
-                      src="imges/images06.jpg"
-                      class="img-fluid"
-                      width="960"
-                      height="600"
-                      loading="lazy"
-                      decoding="async"
-                      alt="Screenshot of the Mavrito Lana Dere web design project"
-                    />
+                    <picture>
+                      <source srcset="images/images06.webp" type="image/webp" />
+                      <img
+                        src="images/images06.jpg"
+                        class="img-fluid"
+                        width="960"
+                        height="600"
+                        loading="lazy"
+                        decoding="async"
+                        alt="Screenshot of the Mavrito Lana Dere web design project"
+                      />
+                    </picture>
                   </div>
                 </a>
                 <div class="work-content">
@@ -662,7 +667,7 @@
                     <div class="col-sm-4">
                       <div class="w-like">
                         <a
-                          href="portfolio-details.html"
+                          href="portfolio-details.html?project=3"
                           aria-label="Read the case study for Mavrito Lana Dere"
                         >
                           <span class="fa-solid fa-circle-plus" aria-hidden="true"></span>
@@ -677,21 +682,24 @@
             <div class="col-md-4" data-reveal>
               <div class="work-box">
                 <a
-                  href="imges/images07.jpg"
+                  href="images/images07.webp"
                   data-gallery="portfolioGallery"
                   class="portfolio-lightbox"
                   aria-label="Open a larger view of the project Bindo Laro Cado"
                 >
                   <div class="work-img">
-                    <img
-                      src="imges/images07.jpg"
-                      class="img-fluid"
-                      width="960"
-                      height="600"
-                      loading="lazy"
-                      decoding="async"
-                      alt="Screenshot of the Bindo Laro Cado web design project"
-                    />
+                    <picture>
+                      <source srcset="images/images07.webp" type="image/webp" />
+                      <img
+                        src="images/images07.jpg"
+                        class="img-fluid"
+                        width="960"
+                        height="600"
+                        loading="lazy"
+                        decoding="async"
+                        alt="Screenshot of the Bindo Laro Cado web design project"
+                      />
+                    </picture>
                   </div>
                 </a>
                 <div class="work-content">
@@ -706,7 +714,7 @@
                     <div class="col-sm-4">
                       <div class="w-like">
                         <a
-                          href="portfolio-details.html"
+                          href="portfolio-details.html?project=4"
                           aria-label="Read the case study for Bindo Laro Cado"
                         >
                           <span class="fa-solid fa-circle-plus" aria-hidden="true"></span>
@@ -721,21 +729,24 @@
             <div class="col-md-4" data-reveal>
               <div class="work-box">
                 <a
-                  href="imges/images08.jpg"
+                  href="images/images08.webp"
                   data-gallery="portfolioGallery"
                   class="portfolio-lightbox"
                   aria-label="Open a larger view of the project Studio Lena Mado"
                 >
                   <div class="work-img">
-                    <img
-                      src="imges/images08.jpg"
-                      class="img-fluid"
-                      width="960"
-                      height="600"
-                      loading="lazy"
-                      decoding="async"
-                      alt="Screenshot of the Studio Lena Mado web design project"
-                    />
+                    <picture>
+                      <source srcset="images/images08.webp" type="image/webp" />
+                      <img
+                        src="images/images08.jpg"
+                        class="img-fluid"
+                        width="960"
+                        height="600"
+                        loading="lazy"
+                        decoding="async"
+                        alt="Screenshot of the Studio Lena Mado web design project"
+                      />
+                    </picture>
                   </div>
                 </a>
                 <div class="work-content">
@@ -750,7 +761,7 @@
                     <div class="col-sm-4">
                       <div class="w-like">
                         <a
-                          href="portfolio-details.html"
+                          href="portfolio-details.html?project=5"
                           aria-label="Read the case study for Studio Lena Mado"
                         >
                           <span class="fa-solid fa-circle-plus" aria-hidden="true"></span>
@@ -765,21 +776,24 @@
             <div class="col-md-4" data-reveal>
               <div class="work-box">
                 <a
-                  href="imges/images09.jpg"
+                  href="images/images09.webp"
                   data-gallery="portfolioGallery"
                   class="portfolio-lightbox"
                   aria-label="Open a larger view of the project Studio Big Bang"
                 >
                   <div class="work-img">
-                    <img
-                      src="imges/images09.jpg"
-                      class="img-fluid"
-                      width="960"
-                      height="600"
-                      loading="lazy"
-                      decoding="async"
-                      alt="Screenshot of the Studio Big Bang web design project"
-                    />
+                    <picture>
+                      <source srcset="images/images09.webp" type="image/webp" />
+                      <img
+                        src="images/images09.jpg"
+                        class="img-fluid"
+                        width="960"
+                        height="600"
+                        loading="lazy"
+                        decoding="async"
+                        alt="Screenshot of the Studio Big Bang web design project"
+                      />
+                    </picture>
                   </div>
                 </a>
                 <div class="work-content">
@@ -794,7 +808,7 @@
                     <div class="col-sm-4">
                       <div class="w-like">
                         <a
-                          href="portfolio-details.html"
+                          href="portfolio-details.html?project=6"
                           aria-label="Read the case study for Studio Big Bang"
                         >
                           <span class="fa-solid fa-circle-plus" aria-hidden="true"></span>
@@ -812,10 +826,7 @@
       <!-- ==================================================================
            Testimonials
            ================================================================== -->
-      <div
-        class="testimonials paralax-mf bg-image bacimge"
-        style="background-image: url(imges/images10.jpg)"
-      >
+      <div class="testimonials paralax-mf bg-image bacimge bg-quote">
         <div class="overlay-mf"></div>
         <div class="container conttest">
           <div class="row">
@@ -831,15 +842,18 @@
                        carousel stuck with both visible. -->
                   <div class="carousel-item active text-center" data-bs-interval="6000">
                     <div>
-                      <img
-                        src="imges/images02.jpg"
-                        class="shadow-lg rounded-circle"
-                        width="150"
-                        height="150"
-                        loading="lazy"
-                        decoding="async"
-                        alt="Xavi Alonso"
-                      />
+                      <picture>
+                        <source srcset="images/images02.webp" type="image/webp" />
+                        <img
+                          src="images/images02.jpg"
+                          class="shadow-lg rounded-circle"
+                          width="150"
+                          height="150"
+                          loading="lazy"
+                          decoding="async"
+                          alt="Xavi Alonso"
+                        />
+                      </picture>
                       <p class="text-capitalize author1">Xavi Alonso</p>
                     </div>
                     <div class="content-test">
@@ -852,15 +866,18 @@
 
                   <div class="carousel-item text-center" data-bs-interval="6000">
                     <div>
-                      <img
-                        src="imges/images11.jpeg"
-                        class="shadow-lg rounded-circle"
-                        width="102"
-                        height="150"
-                        loading="lazy"
-                        decoding="async"
-                        alt="Marta Socrate"
-                      />
+                      <picture>
+                        <source srcset="images/images11.webp" type="image/webp" />
+                        <img
+                          src="images/images11.jpeg"
+                          class="shadow-lg rounded-circle"
+                          width="102"
+                          height="150"
+                          loading="lazy"
+                          decoding="async"
+                          alt="Marta Socrate"
+                        />
+                      </picture>
                       <p class="text-capitalize author1">Marta Socrate</p>
                     </div>
                     <div class="content-test">
@@ -915,16 +932,19 @@
             <div class="col-md-4" data-reveal>
               <article class="card card-blog">
                 <div class="card-img">
-                  <a href="blog-single.html" tabindex="-1" aria-hidden="true">
-                    <img
-                      src="imges/images12.jpg"
-                      class="img-fluid"
-                      width="1000"
-                      height="666"
-                      loading="lazy"
-                      decoding="async"
-                      alt=""
-                    />
+                  <a href="blog-single.html?post=1" tabindex="-1" aria-hidden="true">
+                    <picture>
+                      <source srcset="images/images12.webp" type="image/webp" />
+                      <img
+                        src="images/images12.jpg"
+                        class="img-fluid"
+                        width="1000"
+                        height="666"
+                        loading="lazy"
+                        decoding="async"
+                        alt=""
+                      />
+                    </picture>
                   </a>
                 </div>
                 <div class="card-body">
@@ -934,7 +954,7 @@
                     </div>
                   </div>
                   <h4 class="card-title">
-                    <a href="blog-single.html">See more ideas about Travel</a>
+                    <a href="blog-single.html?post=1">See more ideas about Travel</a>
                   </h4>
                   <p class="card-description">
                     Proin eget tortor risus. Pellentesque in ipsum id orci porta
@@ -944,16 +964,19 @@
                 </div>
                 <div class="card-footer">
                   <div class="post-author">
-                    <a href="#about">
-                      <img
-                        src="imges/images02.jpg"
-                        class="avatar rounded-circle"
-                        width="32"
-                        height="32"
-                        loading="lazy"
-                        decoding="async"
-                        alt=""
-                      />
+                    <a href="index.html#about">
+                      <picture>
+                        <source srcset="images/images02.webp" type="image/webp" />
+                        <img
+                          src="images/images02.jpg"
+                          class="avatar rounded-circle"
+                          width="32"
+                          height="32"
+                          loading="lazy"
+                          decoding="async"
+                          alt=""
+                        />
+                      </picture>
                       <span class="author">Morgan Freeman</span>
                     </a>
                   </div>
@@ -968,16 +991,19 @@
             <div class="col-md-4" data-reveal>
               <article class="card card-blog">
                 <div class="card-img">
-                  <a href="blog-single.html" tabindex="-1" aria-hidden="true">
-                    <img
-                      src="imges/images13.jpg"
-                      class="img-fluid"
-                      width="1000"
-                      height="666"
-                      loading="lazy"
-                      decoding="async"
-                      alt=""
-                    />
+                  <a href="blog-single.html?post=2" tabindex="-1" aria-hidden="true">
+                    <picture>
+                      <source srcset="images/images13.webp" type="image/webp" />
+                      <img
+                        src="images/images13.jpg"
+                        class="img-fluid"
+                        width="1000"
+                        height="666"
+                        loading="lazy"
+                        decoding="async"
+                        alt=""
+                      />
+                    </picture>
                   </a>
                 </div>
                 <div class="card-body">
@@ -987,7 +1013,7 @@
                     </div>
                   </div>
                   <h4 class="card-title">
-                    <a href="blog-single.html">See more ideas about Travel</a>
+                    <a href="blog-single.html?post=2">Design systems that scale</a>
                   </h4>
                   <p class="card-description">
                     Proin eget tortor risus. Pellentesque in ipsum id orci porta
@@ -997,16 +1023,19 @@
                 </div>
                 <div class="card-footer">
                   <div class="post-author">
-                    <a href="#about">
-                      <img
-                        src="imges/images02.jpg"
-                        class="avatar rounded-circle"
-                        width="32"
-                        height="32"
-                        loading="lazy"
-                        decoding="async"
-                        alt=""
-                      />
+                    <a href="index.html#about">
+                      <picture>
+                        <source srcset="images/images02.webp" type="image/webp" />
+                        <img
+                          src="images/images02.jpg"
+                          class="avatar rounded-circle"
+                          width="32"
+                          height="32"
+                          loading="lazy"
+                          decoding="async"
+                          alt=""
+                        />
+                      </picture>
                       <span class="author">Morgan Freeman</span>
                     </a>
                   </div>
@@ -1021,16 +1050,19 @@
             <div class="col-md-4" data-reveal>
               <article class="card card-blog">
                 <div class="card-img">
-                  <a href="blog-single.html" tabindex="-1" aria-hidden="true">
-                    <img
-                      src="imges/images14.jpg"
-                      class="img-fluid"
-                      width="1000"
-                      height="666"
-                      loading="lazy"
-                      decoding="async"
-                      alt=""
-                    />
+                  <a href="blog-single.html?post=3" tabindex="-1" aria-hidden="true">
+                    <picture>
+                      <source srcset="images/images14.webp" type="image/webp" />
+                      <img
+                        src="images/images14.jpg"
+                        class="img-fluid"
+                        width="1000"
+                        height="666"
+                        loading="lazy"
+                        decoding="async"
+                        alt=""
+                      />
+                    </picture>
                   </a>
                 </div>
                 <div class="card-body">
@@ -1040,7 +1072,7 @@
                     </div>
                   </div>
                   <h4 class="card-title">
-                    <a href="blog-single.html">See more ideas about Travel</a>
+                    <a href="blog-single.html?post=3">Shipping accessible interfaces</a>
                   </h4>
                   <p class="card-description">
                     Proin eget tortor risus. Pellentesque in ipsum id orci porta
@@ -1050,16 +1082,19 @@
                 </div>
                 <div class="card-footer">
                   <div class="post-author">
-                    <a href="#about">
-                      <img
-                        src="imges/images02.jpg"
-                        class="avatar rounded-circle"
-                        width="32"
-                        height="32"
-                        loading="lazy"
-                        decoding="async"
-                        alt=""
-                      />
+                    <a href="index.html#about">
+                      <picture>
+                        <source srcset="images/images02.webp" type="image/webp" />
+                        <img
+                          src="images/images02.jpg"
+                          class="avatar rounded-circle"
+                          width="32"
+                          height="32"
+                          loading="lazy"
+                          decoding="async"
+                          alt=""
+                        />
+                      </picture>
                       <span class="author">Morgan Freeman</span>
                     </a>
                   </div>
@@ -1079,8 +1114,7 @@
            ================================================================== -->
       <section
         id="contact"
-        class="paralax-mf footer-paralax bg-image sect-mt4 route"
-        style="background-image: url(imges/images10.jpg)"
+        class="paralax-mf footer-paralax bg-image sect-mt4 route bg-quote"
         aria-labelledby="contact-title"
       >
         <div class="overlay-mf"></div>

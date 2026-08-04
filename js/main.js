@@ -489,7 +489,8 @@
     root.innerHTML = [
       '<button type="button" class="lightbox__btn lightbox__btn--close" aria-label="Close viewer"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>',
       '<button type="button" class="lightbox__btn lightbox__btn--prev" aria-label="Previous image"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>',
-      '<img class="lightbox__image" src="" alt="">',
+      // No src attribute: an empty one makes the browser re-request the page.
+      '<img class="lightbox__image" alt="">',
       '<button type="button" class="lightbox__btn lightbox__btn--next" aria-label="Next image"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>',
       '<p class="lightbox__counter"></p>',
     ].join("");
