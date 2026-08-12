@@ -687,7 +687,7 @@
     const element = select("#element");
     if (!element) return;
 
-    const roles = ["Designer", "Developer", "Freelancer", "Photographer"];
+    const roles = ["Designer", "Developer", "Freelancer", "Always learning"];
 
     // The CDN can be blocked or slow — show something readable regardless.
     if (typeof window.Typed !== "function") {
