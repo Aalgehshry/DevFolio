@@ -21,83 +21,88 @@
 
   const PROJECTS = [
     {
-      title: "Lorem impsum dolor",
+      title: "Campaign landing page",
       category: "Web Design",
-      client: "Acme Studio",
+      client: "Personal project",
       date: "18 Sep. 2018",
       url: "example.com",
       summary:
-        "A marketing site rebuilt around a single flexible layout, so the team " +
-        "could publish new campaign pages without touching a line of CSS.",
+        "My first real attempt at translating a finished design faithfully rather " +
+        "than approximating it. It taught me to read a mock for spacing and type " +
+        "scale, not just for colour.",
       images: ["images04", "images05", "images06"],
     },
     {
-      title: "Loreda Cuno Nere",
+      title: "Responsive photo grid",
       category: "Web Design",
-      client: "Nere Group",
+      client: "Personal project",
       date: "18 Sep. 2018",
       url: "example.com",
       summary:
-        "A brand refresh delivered as a small design system: tokens, six " +
-        "components and a documentation page the client maintains themselves.",
+        "A gallery built with CSS Grid and no media queries at all — the columns " +
+        "come from auto-fit and minmax. It still surprises me how little code that " +
+        "takes.",
       images: ["images05", "images07", "images08"],
     },
     {
-      title: "Mavrito Lana Dere",
+      title: "Long-form article template",
       category: "Web Design",
-      client: "Mavrito",
+      client: "Personal project",
       date: "18 Sep. 2018",
       url: "example.com",
       summary:
-        "An editorial layout tuned for long-form reading, with typography that " +
-        "holds up from a 320px phone to a 4K display.",
+        "An exercise in typography: line length, vertical rhythm and heading " +
+        "hierarchy, tested by actually reading a long article on a phone instead of " +
+        "eyeballing it on a laptop.",
       images: ["images06", "images09", "images04"],
     },
     {
-      title: "Bindo Laro Cado",
+      title: "Multi-step booking form",
       category: "Web Design",
-      client: "Bindo",
+      client: "Personal project",
       date: "18 Sep. 2018",
       url: "example.com",
       summary:
-        "A booking flow reduced from nine steps to four, cutting drop-off by " +
-        "more than a third in the first month after launch.",
+        "Four steps, validation on each one, and real states for empty, loading and " +
+        "error. The happy path took an afternoon; everything else took a week.",
       images: ["images07", "images08", "images05"],
     },
     {
-      title: "Studio Lena Mado",
+      title: "Studio portfolio layout",
       category: "Web Design",
-      client: "Studio Lena",
+      client: "Personal project",
       date: "18 Sep. 2018",
       url: "example.com",
       summary:
-        "A portfolio for a photography studio where the images carry the page " +
-        "and the interface stays out of the way.",
+        "A layout where the photographs carry the page and the interface stays out " +
+        "of the way. Mostly a lesson in restraint, and in how much whitespace a " +
+        "design can take.",
       images: ["images08", "images04", "images09"],
     },
     {
-      title: "Studio Big Bang",
+      title: "Product page performance pass",
       category: "Web Design",
-      client: "Big Bang",
+      client: "Personal project",
       date: "18 Sep. 2017",
       url: "example.com",
       summary:
-        "A product landing page built to load fast on a mid-range phone over " +
-        "3G, without giving up the full-bleed imagery the brand relies on.",
+        "The same page rebuilt to load quickly on a mid-range phone: compressed " +
+        "images, WebP with a fallback, and nothing fetched that the first screen " +
+        "does not need.",
       images: ["images09", "images06", "images07"],
     },
   ];
 
   const POSTS = [
     {
-      title: "See more ideas about Travel",
+      title: "What travelling taught me about small screens",
       category: "Travel",
       date: "18 Sep. 2018",
       datetime: "2018-09-18",
       image: "images12",
       summary:
-        "Notes from a month of working from six different cities, and what it " +
-        "taught me about designing for screens I do not own.",
+        "A month of working from six different cities, and what unreliable hotel " +
+        "wi-fi taught me about building for screens and connections I do not control.",
     },
     {
       title: "Design systems that scale",

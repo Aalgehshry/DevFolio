@@ -495,6 +495,24 @@ picture {
    07. Shared components
    ========================================================================== */
 
+/* --- Equal-height card grids ---
+   Services, portfolio and blog cards carry copy of differing lengths, which
+   left each row with a ragged bottom edge. Making the column a flex container
+   lets the card stretch to the tallest in its row. Only the `col-md-4` card
+   columns are targeted — the `col-sm-12` heading rows must stay block, or
+   their centred title would shrink to fit. */
+.services-mf .col-md-4,
+.portfolio-mf .col-md-4,
+.blog-mf .col-md-4 {
+  display: flex;
+}
+
+.service-box,
+.work-box,
+.card-blog {
+  width: 100%;
+}
+
 /* --- Circular icon badge --- */
 .ico-circle {
   display: block;
