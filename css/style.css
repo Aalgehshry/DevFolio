@@ -84,9 +84,10 @@
   --transition-base: 0.3s ease;
   --transition-slow: 0.5s ease-in-out;
 
-  /* Layout */
-  --header-height: 82px;
-  --header-height-scrolled: 66px;
+  /* Layout — 20px padding top and bottom around a 44px control row.
+     Only used for `scroll-padding-top`; JS reads the real offsetHeight. */
+  --header-height: 84px;
+  --header-height-scrolled: 68px;
   --z-header: 997;
   --z-mobile-nav: 999;
   --z-back-to-top: 998;
@@ -758,8 +759,9 @@ picture {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  /* 44x44 is the minimum comfortable touch target (WCAG 2.5.8). */
+  width: 44px;
+  height: 44px;
   margin-left: 24px;
   padding: 0;
   color: var(--color-on-dark);
@@ -940,20 +942,37 @@ picture {
 
 /* --- Mobile navigation --- */
 .mobile-nav-toggle {
+  /* Hidden by default; the media query below switches it to flex. */
   display: none;
+  align-items: center;
+  justify-content: center;
+  /* A real 44x44 hit area. The template carried `line-height: 0` from when
+     this was an inline <i>; on a <button> that collapsed the border box to
+     24x0. The glyph still painted outside the box, so it looked correct while
+     the tap target was a zero-height sliver. */
+  width: 44px;
+  height: 44px;
+  /* Pull the oversized box back so the glyph stays optically on the edge. */
+  margin-right: -10px;
   padding: 0;
-  font-size: 28px;
-  line-height: 0;
+  font-size: 26px;
+  line-height: 1;
   color: var(--color-on-dark);
   background: transparent;
   border: 0;
+  border-radius: var(--radius-circle);
   cursor: pointer;
-  transition: color var(--transition-slow);
+  transition: color var(--transition-slow),
+    background-color var(--transition-base);
+}
+
+.mobile-nav-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.14);
 }
 
 @media (max-width: 991px) {
   .mobile-nav-toggle {
-    display: block;
+    display: flex;
   }
 
   .navbar ul {
@@ -990,7 +1009,8 @@ picture {
 .navbar-mobile ul {
   display: block;
   position: absolute;
-  top: 55px;
+  /* Clears the 44px close button pinned at top: 15px. */
+  top: 70px;
   right: 15px;
   bottom: 15px;
   left: 15px;
