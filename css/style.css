@@ -722,11 +722,26 @@ picture {
 #header {
   z-index: var(--z-header);
   padding: 20px 0;
+  /* The bar itself is painted by #header::before — see the note there. */
+  transition: padding var(--transition-base), box-shadow var(--transition-base);
+}
+
+/* The translucent blurred bar lives on a pseudo-element instead of on #header
+   directly. `backdrop-filter` makes an element the containing block for its
+   fixed-position descendants, so with it on #header the full-screen mobile
+   menu (#navbar.navbar-mobile, `position: fixed; inset: 0`) resolved against
+   the 84px header instead of the viewport: the panel collapsed to a ~20px
+   sliver and clipped every link. A pseudo-element carries the effect without
+   #header itself becoming a containing block. */
+#header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background-color: var(--overlay-header);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  transition: padding var(--transition-base),
-    background-color var(--transition-base), box-shadow var(--transition-base);
+  transition: background-color var(--transition-base);
 }
 
 #header.header-scrolled {
